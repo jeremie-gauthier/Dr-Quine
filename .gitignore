@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.objs
+Colleen/Colleen
+Grace/Grace
+Grace/Grace_kid*
+Sully/Sully
+Sully/Sully_*
