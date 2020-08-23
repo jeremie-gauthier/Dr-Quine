@@ -6,7 +6,7 @@
 #    By: jergauth <jergauth@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/09 16:57:31 by jergauth          #+#    #+#              #
-#    Updated: 2020/08/09 18:34:12 by jergauth         ###   ########.fr        #
+#    Updated: 2020/08/23 11:49:46 by jergauth         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,12 @@ SOURCES_SULLY	=	Sully.c
 OBJS_SULLY	=	$(SOURCES_SULLY:.c=.o)
 DIR_O_SULLY	=	$(DIR_O)/$(SULLY_PATH)
 DIR_PRE_SULLY	=	$(addprefix $(DIR_O_SULLY)/,$(OBJS_SULLY))
+
+TESTS	=	Colleen/tmp* \
+			Grace/tmp* \
+			Grace/Grace_kid* \
+			Sully/tmp* \
+			Sully/Sully_*
 
 CC		=	clang
 
@@ -83,7 +89,7 @@ tests:
 			@cd Sully && sh test.sh
 
 clean:
-			@rm -rf $(DIR_O)
+			@rm -rf $(DIR_O) $(TESTS)
 
 fclean:	clean
 			@$(RM) $(COLLEEN) $(GRACE) $(SULLY)
