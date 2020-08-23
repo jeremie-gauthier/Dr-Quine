@@ -13,3 +13,5 @@ It's an introduction to the malware projects of 42Paris.
 All the quines have been coded in C and JavaScript.
 
 You can use the `test.sh` file in each Quine to test its validity. No output means no error.
+
+For Sully, the only diff accepted is the counter variable.
