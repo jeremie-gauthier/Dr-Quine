@@ -74,6 +74,14 @@ $(GRACE):	$(DIR_O_GRACE) $(DIR_PRE_GRACE) Makefile
 $(SULLY):	$(DIR_O_SULLY) $(DIR_PRE_SULLY) Makefile
 				$(CC) $(CFLAGS) -o $(SULLY) $(DIR_PRE_SULLY)
 
+tests:
+			@echo 'start Colleen test file'
+			@cd Colleen && sh test.sh
+			@echo 'start Grace test file'
+			@cd Grace && sh test.sh
+			@echo 'start Sully test file'
+			@cd Sully && sh test.sh
+
 clean:
 			@rm -rf $(DIR_O)
 
